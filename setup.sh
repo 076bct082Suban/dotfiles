@@ -1,5 +1,11 @@
 #! /bin/zsh
 
+# Ubuntu
+# sudo apt-get install vim tmux nvim
+
+# Arch
+# sudo pacman -S vim tmux nvim
+
 for file in .vimrc .zshrc .tmux.conf
 do
 	ln -s $file "~/${file}" 
