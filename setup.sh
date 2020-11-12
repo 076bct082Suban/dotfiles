@@ -2,6 +2,7 @@
 
 # Ubuntu
 # sudo apt-get install vim tmux nvim
+# sudo snap install nvim
 
 # Arch
 # sudo pacman -S vim tmux nvim
