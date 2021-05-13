@@ -1,15 +1,29 @@
 call plug#begin('~/local/share/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'lervag/vimtex'
+Plug 'morhetz/gruvbox'
+Plug 'preservim/nerdtree' |
+            \ Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 let g:tex_flavor = 'latex'
+
+" For gruvbox colorscheme
+autocmd vimenter * ++nested colorscheme gruvbox
 
 " coc config
 let g:coc_global_extensions = [
 	\ 'coc-clangd', 
 	\ 'coc-pairs',
 	\ ]
+
+" nerdtree config
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" vim-devicons
+" For file icons
 
 " Some stuff for coc.nvim
 " TextEdit might fail if hidden is not set.

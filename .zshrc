@@ -1,6 +1,5 @@
 # If you come from bash you might have to change your $PATH.
  export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="$PATH:/usr/bin:/usr/sbin"
 # Path to your oh-my-zsh installation.
 export ZSH="/home/suban/.oh-my-zsh"
 
@@ -8,7 +7,7 @@ export ZSH="/home/suban/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="random"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -102,6 +101,7 @@ alias dc="cd"
 alias sl="ls"
 alias ..="cd .."
 alias ll="ls -lah"
+alias open="xdg-open"
 
 #PAGER 
 # For stuff like man pages, git, etc
@@ -114,9 +114,15 @@ export PAGER=$(which more)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-source /home/suban/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Autojump
 [[ -s /home/suban/.autojump/etc/profile.d/autojump.sh ]] && source /home/suban/.autojump/etc/profile.d/autojump.sh
 
 	autoload -U compinit && compinit -u
+
+# For zsh syntax highlighting
+source /home/suban/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# For zsh vi mode
+# From https://github.com/softmoth/zsh-vim-mode
+source "$HOME/zsh-vim-mode/zsh-vim-mode.plugin.zsh"
